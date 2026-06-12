@@ -1,36 +1,61 @@
-body{
+body {
   font-family: Arial, sans-serif;
   font-size: 16px;
 }
 
-header{
+header {
   background-color: lightblue;
 }
 
-nav{
+nav {
   background-color: lightgray;
+  display: inline-block;
+  width: 80%;
 }
 
-main{
+nav img {
+  width: 10%;
+}
+
+main {
   background-color: white;
   font-size: 18px;
 }
 
-footer{
+footer {
   background-color: lightgray;
 }
 
+/*
 li{
-  display: inline-block;
-  width: 150px;
+    display:inline-block;
+    width:150px;
 }
+*/
 
-h1{
+h1 {
   text-align: center;
-  font-family: Georgia, serif;
   color: navy;
 }
 
-p{
+p {
   line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.grid img {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
