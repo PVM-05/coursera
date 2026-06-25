@@ -1,16 +1,16 @@
 function upDate(previewPic){
 
-    console.log("Mouse Over Event");
+    console.log("Mouse or Keyboard Event Triggered");
 
-    console.log("Alt Text: " + previewPic.alt);
-    console.log("Image Source: " + previewPic.src);
+    console.log("Alt Text:", previewPic.alt);
+    console.log("Source:", previewPic.src);
 
     let imageDiv = document.getElementById("image");
 
+    imageDiv.innerHTML = previewPic.alt;
+
     imageDiv.style.backgroundImage =
         "url('" + previewPic.src + "')";
-
-    imageDiv.innerHTML = previewPic.alt;
 }
 
 function undo(){
@@ -21,4 +21,20 @@ function undo(){
 
     imageDiv.innerHTML =
         "Hover over an image below to display here.";
+}
+
+function addTabFocus(){
+
+    console.log("Page Loaded");
+
+    let images = document.querySelectorAll(".preview");
+
+    for(let i = 0; i < images.length; i++){
+
+        console.log(
+            "Adding tabindex to image " + i
+        );
+
+        images[i].setAttribute("tabindex","0");
+    }
 }
